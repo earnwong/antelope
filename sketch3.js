@@ -1,7 +1,7 @@
 let img;
 let cnv;
 function preload(){
-  img = loadImage('assets/antelope2.jpeg');
+  img = loadImage('assets/antelope3.jpeg');
 }
 
 function setup() {
@@ -18,11 +18,13 @@ function setup() {
       let c = img.get(xPos,yPos);
       push();
       translate(xPos, yPos);
-      rotate(radians(random(10)));
+      rotate(radians(random(30)));
       noFill();
       stroke(color(c));
-      strokeWeight(random(1));
+      strokeWeight(random(3));
       point(xPos, yPos);
+      strokeWeight(random(1));
+      point(yPos, xPos);
       strokeWeight(random(2));
       
       //curve(x1, y1, x2, y2, x3, y3, x4, y4)

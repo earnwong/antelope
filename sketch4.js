@@ -1,7 +1,7 @@
 let img;
 let cnv;
 function preload(){
-  img = loadImage('assets/antelope2.jpeg');
+  img = loadImage('assets/antelope4.jpeg');
 }
 
 function setup() {
@@ -18,15 +18,15 @@ function setup() {
       let c = img.get(xPos,yPos);
       push();
       translate(xPos, yPos);
-      rotate(radians(random(10)));
+      rotate(radians(random(350)));
       noFill();
       stroke(color(c));
-      strokeWeight(random(1));
+      strokeWeight(random(2));
       point(xPos, yPos);
       strokeWeight(random(2));
       
       //curve(x1, y1, x2, y2, x3, y3, x4, y4)
-      curve(xPos, yPos, sin(xPos)* random(60), cos(yPos) * sin(xPos) * random(90) , random(80), random(15) , cos(xPos) * sin(yPos) * random(20), cos(yPos) * sin(xPos) * random(260));
+      curve(xPos, yPos, sin(xPos)* random(20), cos(yPos) * sin(xPos) * random(90) , random(80), random(15) , cos(xPos) * sin(yPos) * random(40), cos(yPos) * sin(xPos) * random(200));
       pop();
     }
   }
